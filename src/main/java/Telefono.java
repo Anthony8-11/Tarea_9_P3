@@ -1,2 +1,108 @@
-package PACKAGE_NAME;public class Telefono {
+public class Telefono {
+    private String marca;
+    private String modelo;
+    private String sistemaOperativo;
+    private double tamañoPantalla;
+    private int memoriaRAM;
+    private int almacenamientoInterno;
+    private boolean tieneCamara;
+    private int resolucionCamara;
+    private boolean esSmartphone;
+    private String imei;
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getSistemaOperativo() {
+        return sistemaOperativo;
+    }
+
+    public void setSistemaOperativo(String sistemaOperativo) {
+        this.sistemaOperativo = sistemaOperativo;
+    }
+
+    public double getTamañoPantalla() {
+        return tamañoPantalla;
+    }
+
+    public void setTamañoPantalla(double tamañoPantalla) {
+        this.tamañoPantalla = tamañoPantalla;
+    }
+
+    public int getMemoriaRAM() {
+        return memoriaRAM;
+    }
+
+    public void setMemoriaRAM(int memoriaRAM) {
+        this.memoriaRAM = memoriaRAM;
+    }
+
+    public int getAlmacenamientoInterno() {
+        return almacenamientoInterno;
+    }
+
+    public void setAlmacenamientoInterno(int almacenamientoInterno) {
+        this.almacenamientoInterno = almacenamientoInterno;
+    }
+
+    public boolean isTieneCamara() {
+        return tieneCamara;
+    }
+
+    public void setTieneCamara(boolean tieneCamara) {
+        this.tieneCamara = tieneCamara;
+    }
+
+    public int getResolucionCamara() {
+        return resolucionCamara;
+    }
+
+    public void setResolucionCamara(int resolucionCamara) {
+        this.resolucionCamara = resolucionCamara;
+    }
+
+    public boolean isEsSmartphone() {
+        return esSmartphone;
+    }
+
+    public void setEsSmartphone(boolean esSmartphone) {
+        this.esSmartphone = esSmartphone;
+    }
+
+    public String getImei() {
+        return imei;
+    }
+
+    public void setImei(String imei) {
+        this.imei = imei;
+    }
+
+    // Constructor
+    public Telefono(String marca, String modelo, String sistemaOperativo, double tamañoPantalla, int memoriaRAM,
+                    int almacenamientoInterno, boolean tieneCamara, int resolucionCamara, boolean esSmartphone, String imei) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.sistemaOperativo = sistemaOperativo;
+        this.tamañoPantalla = tamañoPantalla;
+        this.memoriaRAM = memoriaRAM;
+        this.almacenamientoInterno = almacenamientoInterno;
+        this.tieneCamara = tieneCamara;
+        this.resolucionCamara = resolucionCamara;
+        this.esSmartphone = esSmartphone;
+        this.imei = imei;
+    }
+
 }
