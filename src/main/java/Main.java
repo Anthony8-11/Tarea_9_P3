@@ -37,11 +37,9 @@ public class Main {
                     }
                     break;
                 case 3:
-                    // Implementar metodo para actualizar telefono
-                    crud.actualizarTelefono("123456789012345", "Samsung", "Galaxy S21", "Android", 6.2, 8, 128, true, 108, true);
+                    crud.actualizarTelefono("123456789012345", "Samsung", "Galaxy S23", "IOS", 8.2, 20, 128, true, 108, true);
                     break;
                 case 4:
-                    // Implementar motodo para eliminar telefono
                     crud.eliminarTelefono("123456789012345");
                     break;
                 case 5:

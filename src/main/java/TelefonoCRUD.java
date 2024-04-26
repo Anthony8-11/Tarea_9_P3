@@ -6,10 +6,15 @@ import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
 import org.bson.Document;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TelefonoCRUD {
     private final MongoClient mongoClient;
     private final MongoDatabase database;
     private final MongoCollection<Document> collection;
+
+
 
     public TelefonoCRUD() {
         // Conectar a la base de datos y obtener la colección
@@ -47,8 +52,16 @@ public class TelefonoCRUD {
                 .append("imei", "543216789012345"));
     }
 
-    // Método para insertar todos los registros en una LinkedList utilizando la clase Nodo
+
+
+    // Método para insertar todos los registros en un ArrayList y LinkedList utilizando la clase Nodo
     public Nodo insertarEnListaEnlazadaConNodo() {
+
+        List<Telefono> telefonos = new ArrayList<>();
+        for (Document documento : collection.find()) {
+            telefonos.add(documentToTelefono(documento));
+        }
+
         Nodo head = null;
         Nodo current = null;
         for (Document documento : collection.find()) {
@@ -64,8 +77,9 @@ public class TelefonoCRUD {
         return head;
     }
 
+
     //Metodo para actualizar un telefono
-    public void actualizarTelefono(String imei, String marca, String modelo, String sistemaOperativo, double tamanoPantalla, int memoriaRAM, int almacenamientoInterno, boolean tieneCamara, int resolucionCamara, boolean esSmartphone){
+    public void actualizarTelefono( String imei, String marca, String modelo, String sistemaOperativo, double tamanoPantalla, int memoriaRAM, int almacenamientoInterno, boolean tieneCamara, int resolucionCamara, boolean esSmartphone){
         collection.updateOne(Filters.eq("imei", imei), Updates.set("marca", marca));
         collection.updateOne(Filters.eq("imei", imei), Updates.set("modelo", modelo));
         collection.updateOne(Filters.eq("imei", imei), Updates.set("sistemaOperativo", sistemaOperativo));
